@@ -16,9 +16,47 @@ Things you may want to cover:
 * Database initialization
 
 * How to run the test suite
+  bundle exec rspec
+
+##### Generate doc
+
+$ rake docs:generate
+$ open doc/api/index.html
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
 
 * ...
+
+
+##### Check quality and maintenance of code
+
+
+The following task will run differents tools for checking quality, maintenance, and security in this code.
+
+
+```sh
+  rake code:check
+```
+
+
+You can also run this tools manually
+
+
+```sh
+  rubucop .
+```
+
+
+```sh
+  rails_best_practices .
+```
+
+
+```sh
+  brakeman .
+```
+
+
+And so on..
