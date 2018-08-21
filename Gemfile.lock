@@ -204,6 +204,8 @@ GEM
     ruby_dep (1.5.0)
     sexp_processor (4.11.0)
     shellany (0.0.1)
+    shoulda-matchers (3.1.2)
+      activesupport (>= 4.0.0)
     simplecov (0.16.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -255,6 +257,7 @@ DEPENDENCIES
   rspec-rails (= 3.8.0)
   rspec_api_documentation (= 5.1.0)
   rubocop (= 0.58.2)
+  shoulda-matchers (= 3.1.2)
   simplecov (= 0.16.1)
   spring
   spring-watcher-listen (~> 2.0.0)
