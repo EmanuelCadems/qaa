@@ -3,4 +3,6 @@ class Answer < ApplicationRecord
   belongs_to :question
 
   validates :name, presence: true
+
+  delegate :name, prefix: true, to: :provider
 end

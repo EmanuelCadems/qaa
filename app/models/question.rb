@@ -3,4 +3,8 @@ class Question < ApplicationRecord
   has_many :answers
 
   validates :name, presence: true
+
+  delegate :name, prefix: true, to: :asker
+
+  scope :not_private, -> { where(private: false) }
 end

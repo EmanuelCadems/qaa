@@ -27,13 +27,15 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'raddocs', '2.2.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making
 # cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors', '1.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
   gem 'brakeman', '4.3.1', require: false
+  gem 'bullet', '5.7.6'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails', '4.11.0'
   gem 'guard-rspec', '4.7.3', require: false
   gem 'rails_best_practices', '1.19.3'
   gem 'rspec-rails', '3.8.0'
@@ -57,3 +59,9 @@ group :test do
   gem 'shoulda-matchers', '3.1.2'
   gem 'simplecov', '0.16.1', require: false
 end
+
+gem 'api-pagination', '4.8.1'
+gem 'faker', '1.9.1'
+gem 'fast_jsonapi', '1.3'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'will_paginate', '3.1.6'
