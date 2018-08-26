@@ -18,7 +18,8 @@ resource 'V1::Questions', prefix: '/v1' do
 
   get '/v1/questions' do
     example_request 'index' do
-      questions = Question.not_private.includes(:asker, answers: :provider).limit(30)
+      questions = Question.not_private.includes(:asker, answers: :provider)
+                          .limit(30)
 
       options = { include: [:answers] }
 
@@ -67,6 +68,13 @@ resource 'V1::Questions', prefix: '/v1' do
       expect(response_body)
         .to eq(QuestionSerializer.new(questions, options).serialized_json)
       expect(status).to eq(200)
+    end
+  end
+
+  get '/v1/questions?q[name_matches]=:name' do
+    let(:name) { 'cadems' }
+    example_request 'filter by non-existent name' do
+      expect(status).to eq(404)
     end
   end
 
