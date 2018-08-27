@@ -13,7 +13,7 @@ resource 'V1::Questions', prefix: '/v1' do
     create(:question, private: true)
     create_list(:question, 32)
 
-    header 'api-key', tenant.api_key
+    header 'Authorization', "Token token=#{tenant.api_key}"
   end
 
   get '/v1/questions' do

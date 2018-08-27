@@ -1,5 +1,7 @@
 module V1
   class QuestionsController < ApplicationController
+    before_action :authenticate
+
     def index
       options = { include: [:answers] }
 
