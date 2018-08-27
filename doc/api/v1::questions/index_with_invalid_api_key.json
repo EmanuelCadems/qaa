@@ -1,0 +1,45 @@
+{
+  "resource": "V1::Questions",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/questions",
+  "description": "index with invalid api_key",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/questions",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Token token=invalid",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 401,
+      "response_status_text": "Unauthorized",
+      "response_body": " ",
+      "response_headers": {
+        "WWW-Authenticate": "Token realm=\"Application\"",
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "72a9c3e9-2afd-428b-b69d-b6d3ed3ec534",
+        "X-Runtime": "0.002339",
+        "Vary": "Origin",
+        "Content-Length": "1"
+      },
+      "response_content_type": "text/plain; charset=utf-8",
+      "curl": "curl -g \"http://localhost:3000/v1/questions\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Token token=invalid\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

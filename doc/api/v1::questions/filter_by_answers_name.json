@@ -1,0 +1,50 @@
+{
+  "resource": "V1::Questions",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/questions?q[answers_name_matches]=:answer_name",
+  "description": "filter by answers_name",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/questions?q[answers_name_matches]=Heidi+Bettie+Pollich",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Token token=wxQldBQD3PxEPyOUnvOVQAtt",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "q": {
+          "answers_name_matches": "Heidi Bettie Pollich"
+        }
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"168\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 168,\n        \"name\": \"Miss Avery Tora Beer\",\n        \"asker_name\": \"Dominic Colby Spinka\"\n      },\n      \"relationships\": {\n        \"answers\": {\n          \"data\": [\n            {\n              \"id\": \"3\",\n              \"type\": \"answer\"\n            },\n            {\n              \"id\": \"2\",\n              \"type\": \"answer\"\n            },\n            {\n              \"id\": \"1\",\n              \"type\": \"answer\"\n            }\n          ]\n        }\n      }\n    }\n  ],\n  \"included\": [\n    {\n      \"id\": \"3\",\n      \"type\": \"answer\",\n      \"attributes\": {\n        \"name\": \"Yesenia Cyril Prosacco\",\n        \"provider_name\": \"Dr. Velma Tracey Hand\"\n      }\n    },\n    {\n      \"id\": \"2\",\n      \"type\": \"answer\",\n      \"attributes\": {\n        \"name\": \"Masako Lean Kutch\",\n        \"provider_name\": \"Latonya Tomoko Lesch\"\n      }\n    },\n    {\n      \"id\": \"1\",\n      \"type\": \"answer\",\n      \"attributes\": {\n        \"name\": \"Heidi Bettie Pollich\",\n        \"provider_name\": \"Jenise Giuseppina Brown\"\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "Per-Page": "30",
+        "Total": "1",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"815d04b69fd30c06567ce4f58b7aaed5\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "a64d21ca-000e-4ee2-8273-a2ab8de9f18f",
+        "X-Runtime": "0.012530",
+        "Vary": "Origin",
+        "Content-Length": "600"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:3000/v1/questions?q[answers_name_matches]=Heidi+Bettie+Pollich\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Token token=wxQldBQD3PxEPyOUnvOVQAtt\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

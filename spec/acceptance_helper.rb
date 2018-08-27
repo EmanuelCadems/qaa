@@ -3,9 +3,8 @@ require 'rspec_api_documentation'
 require 'rspec_api_documentation/dsl'
 
 RspecApiDocumentation.configure do |config|
-  # config.format = %i[json combined_text html]
-  config.format = [:open_api]
+  config.format = %i[json combined_text html]
   config.curl_host = 'http://localhost:3000'
-  config.api_name = "Example App API"
-  config.api_explanation = "API Example Description"
+  config.api_name = "Questions & Answers API"
+  config.api_explanation = "API for getting questions and answers"
 end

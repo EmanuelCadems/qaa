@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   namespace :v1 do
     resources :questions, only: [:index]
   end
+
+  mount Raddocs::App => '/docs'
+
+  root to: redirect('/docs', status: 302)
 end

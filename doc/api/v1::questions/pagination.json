@@ -1,0 +1,49 @@
+{
+  "resource": "V1::Questions",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/questions?page=2",
+  "description": "pagination",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/questions?page=2",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Token token=v7tdE7quny7cGrJuOzj60wtt",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "page": "2"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"9846\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 9846,\n        \"name\": \"Delectus aliquid culpa nostrum?\",\n        \"asker_name\": \"Jackqueline Madaline Schamberger\"\n      },\n      \"relationships\": {\n        \"answers\": {\n          \"data\": [\n\n          ]\n        }\n      }\n    },\n    {\n      \"id\": \"9847\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 9847,\n        \"name\": \"Vitae sed facilis sit?\",\n        \"asker_name\": \"Thurman Soon Carroll\"\n      },\n      \"relationships\": {\n        \"answers\": {\n          \"data\": [\n\n          ]\n        }\n      }\n    },\n    {\n      \"id\": \"9848\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 9848,\n        \"name\": \"Quod dolor ut et?\",\n        \"asker_name\": \"Miss Ezequiel Jaime Heller\"\n      },\n      \"relationships\": {\n        \"answers\": {\n          \"data\": [\n            {\n              \"id\": \"24246\",\n              \"type\": \"answer\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"id\": \"9849\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 9849,\n        \"name\": \"A magnam corrupti nihil?\",\n        \"asker_name\": \"Josh Natosha Wisoky\"\n      },\n      \"relationships\": {\n        \"answers\": {\n          \"data\": [\n            {\n              \"id\": \"24247\",\n              \"type\": \"answer\"\n            },\n            {\n              \"id\": \"24248\",\n              \"type\": \"answer\"\n            },\n            {\n              \"id\": \"24249\",\n              \"type\": \"answer\"\n            },\n            {\n              \"id\": \"24250\",\n              \"type\": \"answer\"\n            }\n          ]\n        }\n      }\n    }\n  ],\n  \"included\": [\n    {\n      \"id\": \"24246\",\n      \"type\": \"answer\",\n      \"attributes\": {\n        \"name\": \"Enim veniam quos. Quam dolor laboriosam. Incidunt reprehenderit dolor.\",\n        \"provider_name\": \"Riley Alisha Braun\"\n      }\n    },\n    {\n      \"id\": \"24247\",\n      \"type\": \"answer\",\n      \"attributes\": {\n        \"name\": \"Saepe facere fuga. Laborum iusto inventore. Qui doloremque delectus.\",\n        \"provider_name\": \"Elanor Jerry Brakus III\"\n      }\n    },\n    {\n      \"id\": \"24248\",\n      \"type\": \"answer\",\n      \"attributes\": {\n        \"name\": \"Dolorum facilis nesciunt. Harum dicta magnam. Eos consequatur ducimus.\",\n        \"provider_name\": \"Bertie Nelle Murray\"\n      }\n    },\n    {\n      \"id\": \"24249\",\n      \"type\": \"answer\",\n      \"attributes\": {\n        \"name\": \"Velit aliquid ut. Dolorem sunt eveniet. Est accusamus delectus.\",\n        \"provider_name\": \"Malissa Oscar Gaylord\"\n      }\n    },\n    {\n      \"id\": \"24250\",\n      \"type\": \"answer\",\n      \"attributes\": {\n        \"name\": \"Culpa eum perspiciatis. Et consequatur dolor. Sit cupiditate similique.\",\n        \"provider_name\": \"Annetta Nelia Lind\"\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "Link": "<http://example.org/v1/questions?page=1>; rel=\"first\", <http://example.org/v1/questions?page=1>; rel=\"prev\"",
+        "Per-Page": "30",
+        "Total": "34",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a01e086e451bda56d50f1f1e64cbac39\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "09bf5fa8-5c8b-47f3-86e7-b37ff5aaff52",
+        "X-Runtime": "0.012443",
+        "Vary": "Origin",
+        "Content-Length": "1675"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:3000/v1/questions?page=2\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Token token=v7tdE7quny7cGrJuOzj60wtt\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

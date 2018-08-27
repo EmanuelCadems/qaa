@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>V1::Questions API</title>
+    <meta charset="utf-8">
+    <style>
+      
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #404040;
+}
+
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+}
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 18px;
+  line-height: 18px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+td.required .name:after {
+  float: right;
+  content: "required";
+  font-weight: normal;
+  color: #F08080;
+}
+
+a{
+  color: #0069d6;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #404040;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 36px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h3{
+  font-size: 18px;
+  line-height: 36px;
+}
+h4 {
+  font-size: 16px;
+  line-height: 36px;
+}
+
+table{
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  border-collapse: separate;
+  font-size: 13px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+table th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+table th+th, table td+td {
+  border-left: 1px solid #ddd;
+}
+table th, table td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>V1::Questions API</h1>
+
+      <div class="article">
+        <h2>filter by provider_name</h2>
+        <h3>GET /v1/questions?q[answers_provider_name_matches]=:provider_name</h3>
+
+
+
+          <h3>Request</h3>
+
+            <h4>Headers</h4>
+            <pre class="request headers">Accept: application/json
+Content-Type: application/json
+Authorization: Token token=KYCaVRccP6YmsusTLQ66RAtt
+Host: example.org
+Cookie: </pre>
+
+          <h4>Route</h4>
+          <pre class="request route highlight">GET /v1/questions?q[answers_provider_name_matches]=Jenise+Giuseppina+Brown</pre>
+
+            <h4>Query Parameters</h4>
+            <pre class="request query_parameters highlight">q: {&quot;answers_provider_name_matches&quot;=&gt;&quot;Jenise Giuseppina Brown&quot;}</pre>
+
+
+            <h4>cURL</h4>
+            <pre class="request curl">curl -g &quot;http://localhost:3000/v1/questions?q[answers_provider_name_matches]=Jenise+Giuseppina+Brown&quot; -X GET \
+	-H &quot;Accept: application/json&quot; \
+	-H &quot;Content-Type: application/json&quot; \
+	-H &quot;Authorization: Token token=KYCaVRccP6YmsusTLQ66RAtt&quot; \
+	-H &quot;Host: example.org&quot; \
+	-H &quot;Cookie: &quot;</pre>
+
+            <h3>Response</h3>
+              <h4>Headers</h4>
+              <pre class="response headers">Per-Page: 30
+Total: 1
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;815d04b69fd30c06567ce4f58b7aaed5&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 1fe8ff0f-32b0-45fd-9f3b-af7d6f6c1376
+X-Runtime: 0.012945
+Vary: Origin
+Content-Length: 600</pre>
+            <h4>Status</h4>
+            <pre class="response status">200 OK</pre>
+              <h4>Body</h4>
+              <pre class="response body">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;168&quot;,
+      &quot;type&quot;: &quot;question&quot;,
+      &quot;attributes&quot;: {
+        &quot;id&quot;: 168,
+        &quot;name&quot;: &quot;Miss Avery Tora Beer&quot;,
+        &quot;asker_name&quot;: &quot;Dominic Colby Spinka&quot;
+      },
+      &quot;relationships&quot;: {
+        &quot;answers&quot;: {
+          &quot;data&quot;: [
+            {
+              &quot;id&quot;: &quot;3&quot;,
+              &quot;type&quot;: &quot;answer&quot;
+            },
+            {
+              &quot;id&quot;: &quot;2&quot;,
+              &quot;type&quot;: &quot;answer&quot;
+            },
+            {
+              &quot;id&quot;: &quot;1&quot;,
+              &quot;type&quot;: &quot;answer&quot;
+            }
+          ]
+        }
+      }
+    }
+  ],
+  &quot;included&quot;: [
+    {
+      &quot;id&quot;: &quot;3&quot;,
+      &quot;type&quot;: &quot;answer&quot;,
+      &quot;attributes&quot;: {
+        &quot;name&quot;: &quot;Yesenia Cyril Prosacco&quot;,
+        &quot;provider_name&quot;: &quot;Dr. Velma Tracey Hand&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2&quot;,
+      &quot;type&quot;: &quot;answer&quot;,
+      &quot;attributes&quot;: {
+        &quot;name&quot;: &quot;Masako Lean Kutch&quot;,
+        &quot;provider_name&quot;: &quot;Latonya Tomoko Lesch&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;1&quot;,
+      &quot;type&quot;: &quot;answer&quot;,
+      &quot;attributes&quot;: {
+        &quot;name&quot;: &quot;Heidi Bettie Pollich&quot;,
+        &quot;provider_name&quot;: &quot;Jenise Giuseppina Brown&quot;
+      }
+    }
+  ]
+}</pre>
+      </div>
+    </div>
+  </body>
+</html>
