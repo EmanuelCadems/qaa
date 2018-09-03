@@ -40,7 +40,7 @@ describe Rack::Attack, type: :request do
     (first_limit).times do
       Rack::Attack
       .cache
-      .count("questions/tenant:Token token=#{tenant_api_key}", second_period)
+      .count("questions/tenant:Token token=#{tenant_api_key}", first_period)
     end
 
     get "/v1/questions", headers: {

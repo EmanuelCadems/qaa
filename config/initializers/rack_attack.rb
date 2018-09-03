@@ -3,24 +3,9 @@ class Rack::Attack
     port: ENV['REDIS_PORT'], db: ENV['REDIS_DB'],
     password: ENV['REDIS_PASSWORD'])
 
-  limit_proc = proc do |req|
-    if req.first_limit?
-      req.first_limit
-    else
-      req.second_limit
-    end
-  end
 
-  period_proc = proc do |req|
-    if req.first_limit?
-      req.first_period
-    else
-      req.second_period
-    end
-  end
-
-  throttle("questions/tenant", limit: limit_proc , period: period_proc) do |req|
-    if req.path == '/v1/questions' && req.get?
+  throttle("questions/tenant", limit: ENV['SECOND_LIMIT'].to_i , period: ENV['SECOND_PERIOD'].to_i.seconds) do |req|
+    if req.first_count > req.first_limit && req.path == '/v1/questions' && req.get?
       req.env['HTTP_AUTHORIZATION']
     end
   end
