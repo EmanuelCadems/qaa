@@ -18,6 +18,14 @@ Things you may want to cover:
 * How to run the test suite
   bundle exec rspec
 
+
+##### Redis
+
+Start redis with
+
+$ redis-server /usr/local/etc/redis.conf
+
+
 ##### Generate doc
 
 $ rake docs:generate
