@@ -22,32 +22,35 @@ describe Rack::Attack, type: :request do
     Rails.cache.clear
   end
 
-  it "throttle excessive questions by tenant" do
-    (first_limit - 1).times do
-      Rack::Attack
-      .cache
-      .count("questions/tenant:Token token=#{tenant_api_key}", first_period)
+  context 'requests < first_limit' do
+    it "returns success" do
+      (first_limit - 1).times do
+        Rack::Attack
+        .cache
+        .count("questions/tenant:Token token=#{tenant_api_key}", first_period)
+      end
+
+      get "/v1/questions", headers: {
+        AUTHORIZATION: "Token token=#{tenant_api_key}"
+      }
+
+      expect(response).to have_http_status(:success)
     end
-
-    get "/v1/questions", headers: {
-      AUTHORIZATION: "Token token=#{tenant_api_key}"
-    }
-
-    expect(response).to have_http_status(:success)
   end
 
-  it "throttle excessive questions by tenant" do
-    (first_limit).times do
-      Rack::Attack
-      .cache
-      .count("questions/tenant:Token token=#{tenant_api_key}", first_period)
+  context 'requests > first_limit' do
+    it "throttle excessive questions by tenant" do
+      (first_limit).times do
+        Rack::Attack
+        .cache
+        .count("questions/tenant:Token token=#{tenant_api_key}", first_period)
+      end
+
+      get "/v1/questions", headers: {
+        AUTHORIZATION: "Token token=#{tenant_api_key}"
+      }
+
+      expect(response).to have_http_status(:too_many_requests)
     end
-
-    get "/v1/questions", headers: {
-      AUTHORIZATION: "Token token=#{tenant_api_key}"
-    }
-
-    expect(response).to have_http_status(:too_many_requests)
   end
-
 end
