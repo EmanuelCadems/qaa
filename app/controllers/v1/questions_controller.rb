@@ -1,6 +1,6 @@
 module V1
   class QuestionsController < ApplicationController
-    before_action :authenticate
+    before_action :authenticate, :track_requests
 
     def index
       options = { include: [:answers] }
@@ -13,6 +13,13 @@ module V1
       else
         render status: 404
       end
+    end
+
+    private
+
+    def track_requests
+      Rack::Attack.cache.store.incr "#{@current_tenant.id}:"\
+        "request_counter:#{request.fullpath}"
     end
   end
 end
