@@ -1,0 +1,32 @@
+REDIS_PASSWORD: 'YOUR_REDIS_PASSWORD'
+REDIS_HOST: 'localhost'
+REDIS_PORT: '6379'
+REDIS_URL: 'redis://someserver.com:6379/1'
+REDIS_DB: 'qaa_development'
+
+# After the first 4 requests per day, throttle to 1 request per 10 seconds
+FIRST_LIMIT: '4'
+FIRST_PERIOD: '86400'
+SECOND_LIMIT: '1'
+SECOND_PERIOD: '10'
+QUESTIONS_COUNT: '100'
+TENANTS_COUNT: '4'
+
+USERNAME: 'admin'
+PASSWORD: '123123123'
+
+test:
+  # After the first 3 requests per 10 seconds, throttle to 1 request per 10 seconds
+  FIRST_LIMIT: '3'
+  FIRST_PERIOD: '10'
+  SECOND_LIMIT: '1'
+  SECOND_PERIOD: '10'
+  QUESTIONS_COUNT: '3'
+  TENANTS_COUNT: '2'
+
+production:
+  # After the first 100 requests per day, throttle to 1 request per 10 seconds
+  FIRST_LIMIT: '100'
+  FIRST_PERIOD: '86400'
+  SECOND_LIMIT: '1'
+  SECOND_PERIOD: '10'

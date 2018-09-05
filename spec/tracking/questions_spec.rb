@@ -20,7 +20,7 @@ describe Rack::Attack, type: :request do
   end
 
   def avoid_test_overlaps_in_cache
-    Rails.cache.clear
+    Rack::Attack.cache.store.flushall
   end
 
   context 'valid' do

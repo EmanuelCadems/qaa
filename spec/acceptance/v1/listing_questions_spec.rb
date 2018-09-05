@@ -4,7 +4,7 @@ resource 'V1::Questions', prefix: '/v1' do
   let(:asker) { create(:user, :asker) }
   let(:provider) { create(:user, :provider) }
   let(:tenant) { create(:tenant) }
-  let(:public_question) { Question.not_private.first }
+  let(:public_question) { Question.not_private.first.reload }
 
   header 'Accept', 'application/json'
   header 'Content-Type', 'application/json'
