@@ -10,6 +10,7 @@ describe Rack::Attack, type: :request do
   before(:each) do
     setup_rack_attack_cache_store
     avoid_test_overlaps_in_cache
+    create_list(:question, 3)
   end
 
   def setup_rack_attack_cache_store

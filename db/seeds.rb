@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+FactoryBot.create_list(:question, ENV['QUESTIONS_COUNT'].to_i)
+FactoryBot.create_list(:tenant, ENV['TENANTS_COUNT'].to_i)
