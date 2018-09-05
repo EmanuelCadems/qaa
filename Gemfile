@@ -35,7 +35,6 @@ group :development, :test do
   gem 'brakeman', '4.3.1', require: false
   gem 'bullet', '5.7.6'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot_rails', '4.11.0'
   gem 'guard-rspec', '4.7.3', require: false
   gem 'rails_best_practices', '1.19.3'
   gem 'rspec-rails', '3.8.0'
@@ -61,6 +60,7 @@ group :test do
 end
 
 gem 'api-pagination', '4.8.1'
+gem 'factory_bot_rails', '4.11.0'
 gem 'faker', '1.9.1'
 gem 'fast_jsonapi', '1.3'
 gem 'figaro', '1.1.1'

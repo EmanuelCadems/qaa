@@ -122,3 +122,18 @@ You can also run this tools manually
 
 
 And so on..
+
+
+## Deploy
+
+Upload environment variables to heroku with:
+
+```bash
+  $ figaro heroku:set -e production
+```
+
+Check environment variables with
+
+```bash
+  $ heroku config
+```
