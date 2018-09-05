@@ -69,35 +69,37 @@ You can see the coverage with:
 
 Start redis with
 
+```bash
 $ redis-server /usr/local/etc/redis.conf
+```
 
 
 ## Extra feature Backup Redis
 
 You can persist Redis from Memmory to Database running the following task:
 
+```bash
 $ rake redis:persist
+```
 
 You can set a cron job to run all days with this task just in case you lost redis data.
 
 You can recover the persisted data back to redis with:
 
+```bash
 $ rake redis:recover
-
+```
 Be carefull with this last task because you are going to override your redis data with the backup.
 
 
 ## Generate doc
 
+Geenerate doc with:
+
+```bash
 $ rake docs:generate
 $ open doc/api/index.html
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+```
 
 ## Check quality and maintenance of code
 
