@@ -1,6 +1,13 @@
 # README
 
-This is an API about Questions and Answers. You can find the full description inside specs
+This is an API about Questions and Answers. You can find the full description inside specs.
+
+You can check the [documentation](https://quiet-stream-12356.herokuapp.com/docs/)
+
+You can also check the [dashboard](https://quiet-stream-12356.herokuapp.com/admin/)
+
+For the dashboard use the user and password that you received in your email along with the full description of the API.
+
 
 ## Ruby version
 
@@ -126,6 +133,12 @@ And so on..
 
 ## Deploy
 
+Deploy to heroku with:
+
+```bash
+  $ git push heroku master
+```
+
 Upload environment variables to heroku with:
 
 ```bash
@@ -137,3 +150,5 @@ Check environment variables with
 ```bash
   $ heroku config
 ```
+
+

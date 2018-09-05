@@ -119,7 +119,7 @@ table th, table td {
             <h4>Headers</h4>
             <pre class="request headers">Accept: application/json
 Content-Type: application/json
-Authorization: Token token=v7tdE7quny7cGrJuOzj60wtt
+Authorization: Token token=xuTcrQu94Cxaox4crHL4jAtt
 Host: example.org
 Cookie: </pre>
 
@@ -131,10 +131,10 @@ Cookie: </pre>
 
 
             <h4>cURL</h4>
-            <pre class="request curl">curl -g &quot;http://localhost:3000/v1/questions?page=2&quot; -X GET \
+            <pre class="request curl">curl -g &quot;https://quiet-stream-12356.herokuapp.com/v1/questions?page=2&quot; -X GET \
 	-H &quot;Accept: application/json&quot; \
 	-H &quot;Content-Type: application/json&quot; \
-	-H &quot;Authorization: Token token=v7tdE7quny7cGrJuOzj60wtt&quot; \
+	-H &quot;Authorization: Token token=xuTcrQu94Cxaox4crHL4jAtt&quot; \
 	-H &quot;Host: example.org&quot; \
 	-H &quot;Cookie: &quot;</pre>
 
@@ -142,26 +142,26 @@ Cookie: </pre>
               <h4>Headers</h4>
               <pre class="response headers">Link: &lt;http://example.org/v1/questions?page=1&gt;; rel=&quot;first&quot;, &lt;http://example.org/v1/questions?page=1&gt;; rel=&quot;prev&quot;
 Per-Page: 30
-Total: 34
+Total: 32
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;a01e086e451bda56d50f1f1e64cbac39&quot;
+ETag: W/&quot;ff6e62d986330ad6c0ec540a80d2ae54&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 09bf5fa8-5c8b-47f3-86e7-b37ff5aaff52
-X-Runtime: 0.012443
+X-Request-Id: 7ca229e6-d1cb-48cb-938d-c4f82f7b6869
+X-Runtime: 0.010284
 Vary: Origin
-Content-Length: 1675</pre>
+Content-Length: 350</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
   &quot;data&quot;: [
     {
-      &quot;id&quot;: &quot;9846&quot;,
+      &quot;id&quot;: &quot;65&quot;,
       &quot;type&quot;: &quot;question&quot;,
       &quot;attributes&quot;: {
-        &quot;id&quot;: 9846,
-        &quot;name&quot;: &quot;Delectus aliquid culpa nostrum?&quot;,
-        &quot;asker_name&quot;: &quot;Jackqueline Madaline Schamberger&quot;
+        &quot;id&quot;: 65,
+        &quot;name&quot;: &quot;Harum nulla hic quae?&quot;,
+        &quot;asker_name&quot;: &quot;Ms. Desiree Joan Douglas&quot;
       },
       &quot;relationships&quot;: {
         &quot;answers&quot;: {
@@ -172,113 +172,24 @@ Content-Length: 1675</pre>
       }
     },
     {
-      &quot;id&quot;: &quot;9847&quot;,
+      &quot;id&quot;: &quot;66&quot;,
       &quot;type&quot;: &quot;question&quot;,
       &quot;attributes&quot;: {
-        &quot;id&quot;: 9847,
-        &quot;name&quot;: &quot;Vitae sed facilis sit?&quot;,
-        &quot;asker_name&quot;: &quot;Thurman Soon Carroll&quot;
+        &quot;id&quot;: 66,
+        &quot;name&quot;: &quot;Omnis commodi odio est?&quot;,
+        &quot;asker_name&quot;: &quot;Mr. Trent Cyndy Jast&quot;
       },
       &quot;relationships&quot;: {
         &quot;answers&quot;: {
           &quot;data&quot;: [
 
-          ]
-        }
-      }
-    },
-    {
-      &quot;id&quot;: &quot;9848&quot;,
-      &quot;type&quot;: &quot;question&quot;,
-      &quot;attributes&quot;: {
-        &quot;id&quot;: 9848,
-        &quot;name&quot;: &quot;Quod dolor ut et?&quot;,
-        &quot;asker_name&quot;: &quot;Miss Ezequiel Jaime Heller&quot;
-      },
-      &quot;relationships&quot;: {
-        &quot;answers&quot;: {
-          &quot;data&quot;: [
-            {
-              &quot;id&quot;: &quot;24246&quot;,
-              &quot;type&quot;: &quot;answer&quot;
-            }
-          ]
-        }
-      }
-    },
-    {
-      &quot;id&quot;: &quot;9849&quot;,
-      &quot;type&quot;: &quot;question&quot;,
-      &quot;attributes&quot;: {
-        &quot;id&quot;: 9849,
-        &quot;name&quot;: &quot;A magnam corrupti nihil?&quot;,
-        &quot;asker_name&quot;: &quot;Josh Natosha Wisoky&quot;
-      },
-      &quot;relationships&quot;: {
-        &quot;answers&quot;: {
-          &quot;data&quot;: [
-            {
-              &quot;id&quot;: &quot;24247&quot;,
-              &quot;type&quot;: &quot;answer&quot;
-            },
-            {
-              &quot;id&quot;: &quot;24248&quot;,
-              &quot;type&quot;: &quot;answer&quot;
-            },
-            {
-              &quot;id&quot;: &quot;24249&quot;,
-              &quot;type&quot;: &quot;answer&quot;
-            },
-            {
-              &quot;id&quot;: &quot;24250&quot;,
-              &quot;type&quot;: &quot;answer&quot;
-            }
           ]
         }
       }
     }
   ],
   &quot;included&quot;: [
-    {
-      &quot;id&quot;: &quot;24246&quot;,
-      &quot;type&quot;: &quot;answer&quot;,
-      &quot;attributes&quot;: {
-        &quot;name&quot;: &quot;Enim veniam quos. Quam dolor laboriosam. Incidunt reprehenderit dolor.&quot;,
-        &quot;provider_name&quot;: &quot;Riley Alisha Braun&quot;
-      }
-    },
-    {
-      &quot;id&quot;: &quot;24247&quot;,
-      &quot;type&quot;: &quot;answer&quot;,
-      &quot;attributes&quot;: {
-        &quot;name&quot;: &quot;Saepe facere fuga. Laborum iusto inventore. Qui doloremque delectus.&quot;,
-        &quot;provider_name&quot;: &quot;Elanor Jerry Brakus III&quot;
-      }
-    },
-    {
-      &quot;id&quot;: &quot;24248&quot;,
-      &quot;type&quot;: &quot;answer&quot;,
-      &quot;attributes&quot;: {
-        &quot;name&quot;: &quot;Dolorum facilis nesciunt. Harum dicta magnam. Eos consequatur ducimus.&quot;,
-        &quot;provider_name&quot;: &quot;Bertie Nelle Murray&quot;
-      }
-    },
-    {
-      &quot;id&quot;: &quot;24249&quot;,
-      &quot;type&quot;: &quot;answer&quot;,
-      &quot;attributes&quot;: {
-        &quot;name&quot;: &quot;Velit aliquid ut. Dolorem sunt eveniet. Est accusamus delectus.&quot;,
-        &quot;provider_name&quot;: &quot;Malissa Oscar Gaylord&quot;
-      }
-    },
-    {
-      &quot;id&quot;: &quot;24250&quot;,
-      &quot;type&quot;: &quot;answer&quot;,
-      &quot;attributes&quot;: {
-        &quot;name&quot;: &quot;Culpa eum perspiciatis. Et consequatur dolor. Sit cupiditate similique.&quot;,
-        &quot;provider_name&quot;: &quot;Annetta Nelia Lind&quot;
-      }
-    }
+
   ]
 }</pre>
       </div>
