@@ -19,7 +19,7 @@ module V1
 
     def track_requests
       Rack::Attack.cache.store.incr "#{@current_tenant.id}:"\
-        "request_counter:#{request.fullpath}"
+        "request_counter:/v1/questions"
     end
   end
 end
