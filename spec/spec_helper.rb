@@ -1,6 +1,8 @@
 require 'support/tasks'
 require 'simplecov'
 require 'bullet'
+require 'capybara/rspec'
+require 'support/capybara_helper'
 SimpleCov.start 'rails' do
   add_filter %r{^/app/channels/}
   add_filter %r{^/app/jobs/}
@@ -108,6 +110,7 @@ RSpec.configure do |config|
     metadata[:type] = :task
   end
 
+  config.include CapybaraHelper
   config.include TaskExampleGroup, type: :task
 
   config.before(:suite) do

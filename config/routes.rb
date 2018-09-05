@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :v1 do
     resources :questions, only: [:index]
@@ -6,5 +7,5 @@ Rails.application.routes.draw do
 
   mount Raddocs::App => '/docs'
 
-  root to: redirect('/docs', status: 302)
+  root to: redirect('/admin', status: 302)
 end
