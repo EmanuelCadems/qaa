@@ -1,7 +1,9 @@
 # README
 
+[![GitHub version](https://badge.fury.io/gh/EmanuelCadems%2Fqaa.svg)](https://badge.fury.io/gh/EmanuelCadems%2Fqaa)
 [![Build Status](https://travis-ci.com/EmanuelCadems/qaa.svg?branch=master)](https://travis-ci.com/EmanuelCadems/qaa)
 [![Maintainability](https://api.codeclimate.com/v1/badges/04bae9be0c5a2c97cf37/maintainability)](https://codeclimate.com/github/EmanuelCadems/qaa/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/EmanuelCadems/qaa/badge.svg?branch=master)](https://coveralls.io/github/EmanuelCadems/qaa?branch=master)
 
 
 This is an API about Questions and Answers. You can find the full description inside specs.
