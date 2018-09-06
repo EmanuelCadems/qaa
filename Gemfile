@@ -60,6 +60,7 @@ group :test do
 end
 
 gem 'api-pagination', '4.8.1'
+gem 'coveralls', require: false
 gem 'factory_bot_rails', '4.11.0'
 gem 'faker', '1.9.1'
 gem 'fast_jsonapi', '1.3'

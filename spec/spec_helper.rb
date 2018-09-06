@@ -4,6 +4,8 @@ require 'bullet'
 require 'capybara/rspec'
 require 'support/capybara_helper'
 require 'database_cleaner'
+require 'coveralls'
+Coveralls.wear!
 
 SimpleCov.start 'rails' do
   add_filter %r{^/app/channels/}

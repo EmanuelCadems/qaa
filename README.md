@@ -1,5 +1,9 @@
 # README
 
+[![Build Status](https://travis-ci.com/EmanuelCadems/qaa.svg?branch=master)](https://travis-ci.com/EmanuelCadems/qaa)
+[![Maintainability](https://api.codeclimate.com/v1/badges/04bae9be0c5a2c97cf37/maintainability)](https://codeclimate.com/github/EmanuelCadems/qaa/maintainability)
+
+
 This is an API about Questions and Answers. You can find the full description inside specs.
 
 You can check the [documentation](https://quiet-stream-12356.herokuapp.com/docs/)
