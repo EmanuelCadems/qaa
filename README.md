@@ -8,9 +8,7 @@
 
 This is an API about Questions and Answers. You can find the full description inside specs.
 
-You can check the [documentation](https://quiet-stream-12356.herokuapp.com/docs/)
-
-You can also check the [dashboard](https://quiet-stream-12356.herokuapp.com/admin/)
+You can check the [documentation](https://quiet-stream-12356.herokuapp.com/docs/) and the [dashboard](https://quiet-stream-12356.herokuapp.com/admin/)
 
 For the dashboard use the user and password that you received in your email along with the full description of the API.
 
@@ -19,7 +17,9 @@ For the dashboard use the user and password that you received in your email alon
 
 
 2.5.1
+
 Are you using rvm?
+
 run:
 ```bash
   $ cd .
@@ -80,7 +80,7 @@ $ redis-server /usr/local/etc/redis.conf
 ```
 
 
-## Extra feature Backup Redis
+## Extra feature Redis Backup
 
 You can persist Redis from Memmory to Database running the following task:
 
@@ -118,7 +118,7 @@ The following task will run differents tools for checking quality, maintenance, 
 ```
 
 
-You can also run this tools manually
+You can also run these tools manually
 
 
 ```sh
