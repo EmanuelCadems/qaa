@@ -11,7 +11,7 @@ module V1
       if questions.any?
         render json: QuestionSerializer.new(questions, options).serialized_json
       else
-        render status: 404
+        render status: 204
       end
     end
 

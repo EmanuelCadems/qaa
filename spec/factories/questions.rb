@@ -6,7 +6,7 @@ FactoryBot.define do
     private { false }
 
     after :create do |question|
-      rand(6).times { create(:answer, question: question) }
+      create(:answer, question: question)
     end
   end
 end

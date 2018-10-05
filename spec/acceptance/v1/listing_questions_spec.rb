@@ -74,7 +74,7 @@ resource 'V1::Questions', prefix: '/v1' do
   get '/v1/questions?q[name_matches]=:name' do
     let(:name) { 'cadems' }
     example_request 'filter by non-existent name' do
-      expect(status).to eq(404)
+      expect(status).to eq(204)
     end
   end
 
