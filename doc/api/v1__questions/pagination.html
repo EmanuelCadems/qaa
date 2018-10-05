@@ -119,7 +119,7 @@ table th, table td {
             <h4>Headers</h4>
             <pre class="request headers">Accept: application/json
 Content-Type: application/json
-Authorization: Token token=xuTcrQu94Cxaox4crHL4jAtt
+Authorization: Token token=RUczQuvKOcps0EJfGP5yogtt
 Host: example.org
 Cookie: </pre>
 
@@ -134,7 +134,7 @@ Cookie: </pre>
             <pre class="request curl">curl -g &quot;https://quiet-stream-12356.herokuapp.com/v1/questions?page=2&quot; -X GET \
 	-H &quot;Accept: application/json&quot; \
 	-H &quot;Content-Type: application/json&quot; \
-	-H &quot;Authorization: Token token=xuTcrQu94Cxaox4crHL4jAtt&quot; \
+	-H &quot;Authorization: Token token=RUczQuvKOcps0EJfGP5yogtt&quot; \
 	-H &quot;Host: example.org&quot; \
 	-H &quot;Cookie: &quot;</pre>
 
@@ -144,12 +144,12 @@ Cookie: </pre>
 Per-Page: 30
 Total: 32
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;ff6e62d986330ad6c0ec540a80d2ae54&quot;
+ETag: W/&quot;ba8cb6f9ea725ef7e66c327f44fb3ea7&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 7ca229e6-d1cb-48cb-938d-c4f82f7b6869
-X-Runtime: 0.010284
+X-Request-Id: b6092e25-f47d-41a8-bb8f-b87e83336739
+X-Runtime: 0.010738
 Vary: Origin
-Content-Length: 350</pre>
+Content-Length: 716</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
@@ -160,13 +160,16 @@ Content-Length: 350</pre>
       &quot;type&quot;: &quot;question&quot;,
       &quot;attributes&quot;: {
         &quot;id&quot;: 65,
-        &quot;name&quot;: &quot;Harum nulla hic quae?&quot;,
-        &quot;asker_name&quot;: &quot;Ms. Desiree Joan Douglas&quot;
+        &quot;name&quot;: &quot;Omnis laboriosam consequatur quis?&quot;,
+        &quot;asker_name&quot;: &quot;Yvette Vi Kuhlman&quot;
       },
       &quot;relationships&quot;: {
         &quot;answers&quot;: {
           &quot;data&quot;: [
-
+            {
+              &quot;id&quot;: &quot;65&quot;,
+              &quot;type&quot;: &quot;answer&quot;
+            }
           ]
         }
       }
@@ -176,20 +179,38 @@ Content-Length: 350</pre>
       &quot;type&quot;: &quot;question&quot;,
       &quot;attributes&quot;: {
         &quot;id&quot;: 66,
-        &quot;name&quot;: &quot;Omnis commodi odio est?&quot;,
-        &quot;asker_name&quot;: &quot;Mr. Trent Cyndy Jast&quot;
+        &quot;name&quot;: &quot;Id quia et est?&quot;,
+        &quot;asker_name&quot;: &quot;Takisha Lorrie Cartwright&quot;
       },
       &quot;relationships&quot;: {
         &quot;answers&quot;: {
           &quot;data&quot;: [
-
+            {
+              &quot;id&quot;: &quot;66&quot;,
+              &quot;type&quot;: &quot;answer&quot;
+            }
           ]
         }
       }
     }
   ],
   &quot;included&quot;: [
-
+    {
+      &quot;id&quot;: &quot;65&quot;,
+      &quot;type&quot;: &quot;answer&quot;,
+      &quot;attributes&quot;: {
+        &quot;name&quot;: &quot;Natus facilis omnis. Hic repudiandae mollitia. Non libero dicta.&quot;,
+        &quot;provider_name&quot;: &quot;Tad Khalilah Corkery&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;66&quot;,
+      &quot;type&quot;: &quot;answer&quot;,
+      &quot;attributes&quot;: {
+        &quot;name&quot;: &quot;Perspiciatis vero eum. Ex ut consequatur. Nesciunt libero fuga.&quot;,
+        &quot;provider_name&quot;: &quot;Kurtis Chase Kemmer&quot;
+      }
+    }
   ]
 }</pre>
       </div>

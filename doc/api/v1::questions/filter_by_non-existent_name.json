@@ -19,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Token token=nNQsANUCXpp9mwJOaQ42JQtt",
+        "Authorization": "Token token=cFo95uQdz4kuwI6hrltdigtt",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -29,21 +29,19 @@
         }
       },
       "request_content_type": "application/json",
-      "response_status": 404,
-      "response_status_text": "Not Found",
-      "response_body": " ",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
       "response_headers": {
         "Per-Page": "30",
         "Total": "0",
-        "Content-Type": "text/plain; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "e7a600ce-b634-482d-9873-718a870976dc",
-        "X-Runtime": "0.006326",
-        "Vary": "Origin",
-        "Content-Length": "1"
+        "X-Request-Id": "26059ed0-7b7c-4517-8436-b30c22bde154",
+        "X-Runtime": "0.006512",
+        "Vary": "Origin"
       },
-      "response_content_type": "text/plain; charset=utf-8",
-      "curl": "curl -g \"https://quiet-stream-12356.herokuapp.com/v1/questions?q[name_matches]=cadems\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Token token=nNQsANUCXpp9mwJOaQ42JQtt\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "response_content_type": null,
+      "curl": "curl -g \"https://quiet-stream-12356.herokuapp.com/v1/questions?q[name_matches]=cadems\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Token token=cFo95uQdz4kuwI6hrltdigtt\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }
